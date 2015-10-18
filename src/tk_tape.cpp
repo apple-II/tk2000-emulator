@@ -7,19 +7,19 @@
 ***/
 
 /*  Emulador do computador TK2000 (Microdigital)
- *  por FÃ¡bio Belavenuto - Copyright (C) 2004
+ *  por Fábio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo Ã© distribuido pela LicenÃ§a PÃºblica Geral GNU.
+ *  Este arquivo é distribuido pela Licença Pública Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE NÃƒO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE NÃO OFERECE NENHUMA GARANTIA
  *
  */
 
-// Emula um tape (ainda nÃ£o implementado)
+// Emula um tape (ainda não implementado)
 
 #include "tk_stdhdr.h"
 #include "tk_tape.h"
@@ -28,9 +28,9 @@
 #include "tk_registro.h"
 #include "tk_janela.h"
 
-// DefiniÃ§Ãµes
+// Definições
 
-// VariÃ¡veis
+// Variáveis
 static FILE *HandleArq = NULL;
 static char NomeTitulo[MAX_PATH];
 static char *Buffer;
@@ -38,9 +38,9 @@ static int  PosBuffer = 0;
 static int  TamBuffer = 0;
 static int  TamDados  = 0;
 
-// ProtÃ³tipos
+// Protótipos
 
-// FunÃ§Ãµes Internas
+// Funções Internas
 //===========================================================================
 void TapePegaTitulo(char *NomeImagem) {
 	BOOL found = 0;
@@ -72,7 +72,7 @@ void TapePegaTitulo(char *NomeImagem) {
 	NomeTitulo[30] = 0;
 }
 
-// FunÃ§Ãµes Globais
+// Funções Globais
 //===========================================================================
 void TapeInicializa() {
 	//
@@ -197,7 +197,7 @@ void TapeNotifyInvalidImage (char* imagefilename,int error)
 		case 2:
 			sprintf(buffer,
 					"Erro ao abrir o arquivo %s.\nO formato "
-					"da imagem do disco nÃ£o foi reconhecido.",
+					"da imagem do disco não foi reconhecido.",
 					imagefilename);
 			FrameMostraMensagemAdvertencia(buffer);
 			break;

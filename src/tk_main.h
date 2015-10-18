@@ -1,28 +1,28 @@
 
 /*  Emulador do computador TK2000 (Microdigital)
- *  por FÃ¡bio Belavenuto - Copyright (C) 2004
+ *  por Fábio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo Ã© distribuido pela LicenÃ§a PÃºblica Geral GNU.
+ *  Este arquivo é distribuido pela Licença Pública Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE NÃƒO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE NÃO OFERECE NENHUMA GARANTIA
  *
  */
 
 #ifndef MAIN_H
 #define MAIN_H
 
-// DefiniÃ§Ã£o do	Modo do	Processador
+// Definição do	Modo do	Processador
 #define	 MODE_LOGO		0
 #define	 MODE_PAUSED	1
 #define	 MODE_RUNNING	2
 #define	 MODE_DEBUG		3
 #define	 MODE_STEPPING	4
 
-// VersÃ£o, Titulo e Arq de Rom
+// Versão, Titulo e Arq de Rom
 #define	VERSIONSTRING "0.2"
 #define	TITULO        "Emulador TK2000"
 #define	NOMEARQROM    "TK2000.rom"
@@ -30,7 +30,7 @@
 #define	NOMEARQBMP    "TK2000.bmp"
 #define NOMEARQTKDOS  "TKDOS2000.dsk"
 
-// DefiniÃ§Ãµes Gerais
+// Definições Gerais
 #define	 SPEED_NORMAL	10
 #define	 SPEED_MAX		40
 
@@ -46,7 +46,7 @@ typedef	struct _IMAGE__
 	int unused;
 } *HIMAGE;
 
-// VariÃ¡veis Externas
+// Variáveis Externas
 extern HINSTANCE instance;
 extern DWORD  cumulativecycles;
 extern DWORD  cyclenum;

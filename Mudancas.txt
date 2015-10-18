@@ -1,13 +1,13 @@
-MudanÃ§as na versÃ£o 0.2
+Mudanças na versão 0.2
 
- - Corrigido o carregamento das configuraÃ§Ãµes da expansÃ£o
- - Reimplementado a emulaÃ§Ã£o do teclado. A emulaÃ§Ã£o estÃ¡ 99.9% fiel ao teclado original.
- - Adicionado recurso de colagem de texto da Ã¡rea de transferÃªncia via SHIFT+INSERT, com opÃ§Ã£o de acelerar a emulaÃ§Ã£o ao colar.
- - Corrigido ciclos das instruÃ§Ãµes branch.
- - Adicionado exibiÃ§Ã£o dos ciclos cumulativos no depurador, com novo comando 'cc' para zerÃ¡-lo.
- - Adicionado mais sÃ­mbolos da RAM e ROM para o depurador.
- - Adicionado recurso para extrair programa BASIC da memÃ³ria para a Ã¡rea de transferÃªncia
+ - Corrigido o carregamento das configurações da expansão
+ - Reimplementado a emulação do teclado. A emulação está 99.9% fiel ao teclado original.
+ - Adicionado recurso de colagem de texto da área de transferência via SHIFT+INSERT, com opção de acelerar a emulação ao colar.
+ - Corrigido ciclos das instruções branch.
+ - Adicionado exibição dos ciclos cumulativos no depurador, com novo comando 'cc' para zerá-lo.
+ - Adicionado mais símbolos da RAM e ROM para o depurador.
+ - Adicionado recurso para extrair programa BASIC da memória para a área de transferência
 
-MudanÃ§as na versÃ£o 0.1
+Mudanças na versão 0.1
 
- - Primeira VersÃ£o
+ - Primeira Versão

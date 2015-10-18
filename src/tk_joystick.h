@@ -1,24 +1,24 @@
 
 /*  Emulador do computador TK2000 (Microdigital)
- *  por FÃ¡bio Belavenuto - Copyright (C) 2004
+ *  por Fábio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo Ã© distribuido pela LicenÃ§a PÃºblica Geral GNU.
+ *  Este arquivo é distribuido pela Licença Pública Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE NÃƒO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE NÃO OFERECE NENHUMA GARANTIA
  *
  */
 
 #ifndef JOYSTICK_H
 #define JOYSTICK_H
 
-// VariÃ¡veis Externas
+// Variáveis Externas
 extern DWORD	  joytype;
 
-// ProtÃ³tipos
+// Protótipos
 void JoyInitialize();
 BOOL JoyProcessKey(int,BOOL,BOOL,BOOL);
 void JoyReset();
@@ -30,7 +30,7 @@ BOOL JoyUsingMouse();
 BYTE JoyVerificaTecla(int);
 
 
-// ProtÃ³tipos Softswitches
+// Protótipos Softswitches
 
 #endif
 // EOF

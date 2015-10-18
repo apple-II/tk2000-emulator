@@ -7,19 +7,19 @@
 ***/
 
 /*  Emulador do computador TK3000 //e (Microdigital)
- *  por FÃ¡bio Belavenuto - Copyright (C) 2004
+ *  por Fábio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo Ã© distribuido pela LicenÃ§a PÃºblica Geral GNU.
+ *  Este arquivo é distribuido pela Licença Pública Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE NÃƒO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE NÃO OFERECE NENHUMA GARANTIA
  *
  */
 
-// FunÃ§Ãµes para manipulaÃ§Ã£o de imagens de diskete
+// Funções para manipulação de imagens de diskete
 
 #include "tk_stdhdr.h"
 #include "tk_imagem.h"
@@ -938,7 +938,7 @@ int ImageOpen (char*  imagefilename,
 		unzFile       ArqZip;
 		unz_file_info InfArq;
 
-		// Verifica se o arquivo ZIP estÃ¡ como somente-leitura
+		// Verifica se o arquivo ZIP está como somente-leitura
 		if (!*writeprotected)
 			file = fopen(imagefilename, "rb+");
 		if (file == NULL)
@@ -976,7 +976,7 @@ int ImageOpen (char*  imagefilename,
 								0);
 			zipCloseFileInZip(ArqZip);
 			zipClose(ArqZip, NULL);
-			file = fopen(imagefilename, "r");		// para enganar a verificaÃ§Ã£o abaixo;
+			file = fopen(imagefilename, "r");		// para enganar a verificação abaixo;
 
 		}
 
@@ -984,7 +984,7 @@ int ImageOpen (char*  imagefilename,
 		if (file == NULL)
 			return 1;
 		else
-			fclose(file);			// Quem abre o arquivo Ã© o unzOpen()
+			fclose(file);			// Quem abre o arquivo é o unzOpen()
 
 		ArqZip = unzOpen(imagefilename);
 		if (!ArqZip)

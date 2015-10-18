@@ -1,17 +1,17 @@
 /*  Emulador do computador TK2000 (Microdigital)
- *  por FÃ¡bio Belavenuto - Copyright (C) 2004
+ *  por Fábio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo Ã© distribuido pela LicenÃ§a PÃºblica Geral GNU.
+ *  Este arquivo é distribuido pela Licença Pública Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE NÃƒO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE NÃO OFERECE NENHUMA GARANTIA
  *
  */
 
-// FunÃ§Ãµes do Som
+// Funções do Som
 
 // Core sound related functionality
 
@@ -24,10 +24,10 @@
 
 //-----------------------------------------------------------------------------
 
-// DefiniÃ§Ãµes
+// Definições
 #define MAX_SOUND_DEVICES 10
 
-// VariÃ¡veis
+// Variáveis
 static char *sound_devices[MAX_SOUND_DEVICES];
 static GUID sound_device_guid[MAX_SOUND_DEVICES];
 static int num_sound_devices = 0;
@@ -47,7 +47,7 @@ static const DWORD g_dwDSSpkrBufferSize = 16 * 1024 * sizeof(short) * g_nSPKR_Nu
 
 
 
-// FunÃ§Ãµes Internas
+// Funções Internas
 //-----------------------------------------------------------------------------
 
 static BOOL CALLBACK DSEnumProc(LPGUID lpGUID, LPCTSTR lpszDesc, LPCTSTR lpszDrvName,  LPVOID lpContext)
@@ -324,7 +324,7 @@ static void Som_DSUninit()
 }
 
 
-// FunÃ§Ãµes Globais
+// Funções Globais
 
 
 //-----------------------------------------------------------------------------

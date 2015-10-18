@@ -7,19 +7,19 @@
 ***/
 
 /*  Emulador do computador TK2000 (Microdigital)
- *  por F√°bio Belavenuto - Copyright (C) 2004
+ *  por F·bio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo √© distribuido pela Licen√ßa P√∫blica Geral GNU.
+ *  Este arquivo È distribuido pela LicenÁa P˙blica Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE N√ÉO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE N√O OFERECE NENHUMA GARANTIA
  *
  */
 
-// Manipula a janela principal e di√°logos
+// Manipula a janela principal e di·logos
 
 #include "tk_stdhdr.h"
 #include "tk_janela.h"
@@ -40,7 +40,7 @@
 #include "../recursos/resource.h"
 #include "utilitarios.h"
 
-// Defini√ß√µes
+// DefiniÁıes
 #define	WIDTH_DIALOGO	240
 #define	HEIGHT_DIALOGO	120
 #define POSX_ROTULO		10
@@ -52,7 +52,7 @@
 #define POSX_BTNCANC    130
 #define POSY_BTNCANC    55
 
-// Defini√ß√µes
+// DefiniÁıes
 #define STATUSHEIGHT	26
 #define STATUSYPOS1		3
 #define STATUSYPOS2		STATUSYPOS1 + 11
@@ -79,7 +79,7 @@ HPEN	btnhighlightpen = (HPEN)0;
 HPEN	btnshadowpen    = (HPEN)0;
 HBITMAP	leds[3];
 
-// Vari√°veis
+// Vari·veis
 HWND Janela;
 HWND Rotulo;
 HWND edtValor;
@@ -90,7 +90,7 @@ int  BotaoApertado = 0;
 
 char   opsJoystick[]    = "Desabilitado\0"
                           "Joystick do PC\0"
-                          "Teclado (padr√£o)\0"
+                          "Teclado (padr„o)\0"
                           "Teclado (centralizado)\0"
                           "Mouse\0";
 
@@ -104,16 +104,16 @@ char   opsSom[]         = "Desabilitado\0"
                           "PC Speaker (translatado)\0"
                           "Placa de Som\0";
 
-char   opsVideo[]       = "Monocrom√°tico\0"
-                          "Colorido (padr√£o)\0"
+char   opsVideo[]       = "Monocrom·tico\0"
+                          "Colorido (padr„o)\0"
                           "Colorido (otimizado)\0"
-                          "Emula√ß√£o de TV\0";
+                          "EmulaÁ„o de TV\0";
 
 char   opsExpansao[]    = "Nada\0"
                           "Interface Disco\0";
 
 char   opsDisco[]       = "Velocidade Real\0"
-                          "Velocidade R√°pida\0";
+                          "Velocidade R·pida\0";
 
 // Prototipos
 LRESULT CALLBACK WndProcInteiro(
@@ -152,7 +152,7 @@ void EnableTrackbar (HWND window, BOOL enable);
 void FillComboBox(HWND window, int controlid, LPCTSTR choices, int currentchoice);
 void DrawCrosshairs (int x, int y);
 
-// Fun√ß√µes
+// FunÁıes
 LRESULT CALLBACK WndProcInteiro(
 	HWND   Handle,		// handle of window
 	UINT   Mensagem,	// message identifier
@@ -196,7 +196,7 @@ LRESULT CALLBACK WndProcInteiro(
 	return DefWindowProc(Handle,Mensagem,wParam,lParam);
 }
 
-// Fun√ß√µes Callback
+// FunÁıes Callback
 LRESULT CALLBACK FrameWndProc (HWND   window,
                                UINT   message,
                                WPARAM wparam,
@@ -457,11 +457,11 @@ LRESULT CALLBACK FrameWndProc (HWND   window,
 			{
 				Som_Mute();
 				if (MessageBox((HWND)framewindow,
-							"Ao reiniciar o emulador o estado da m√°quina ser√° "
+							"Ao reiniciar o emulador o estado da m·quina ser· "
 							"resetado, causando perda de qualquer trabalho "
-							"n√£o salvo.\n\n"
-							"Voc√™ quer continuar?",
-							"Configura√ß√£o",
+							"n„o salvo.\n\n"
+							"VocÍ quer continuar?",
+							"ConfiguraÁ„o",
 							MB_ICONQUESTION | MB_YESNO | MB_SETFOREGROUND) == IDNO)
 				{
 					break;
@@ -515,7 +515,7 @@ BOOL CALLBACK ConfigDlgProc (HWND   window,
 					BOOL  newdisktype     = (BOOL) SendDlgItemMessage(window, cbDisco,       CB_GETCURSEL,0,0);
 
 					NewSlotAux = (BYTE)SendDlgItemMessage(window, cbExpansao,    CB_GETCURSEL,0,0);
-					// Se houve mudan√ßa no slot auxiliar
+					// Se houve mudanÁa no slot auxiliar
 					if (NewSlotAux != SlotAux)
 					{
 						if (!MemAtualizaSlotAux())
@@ -531,11 +531,11 @@ BOOL CALLBACK ConfigDlgProc (HWND   window,
 					if (newdisktype != enhancedisk)
 					{
 						if (MessageBox(window,
-									"Voc√™ mudou a velocidade de acesso ao disco. "
-									"Essa mudan√ßa ter√° efeito somente da pr√≥xima "
+									"VocÍ mudou a velocidade de acesso ao disco. "
+									"Essa mudanÁa ter· efeito somente da prÛxima "
 									"vez que o emulador for reiniciado.\n\n"
-									"Voc√™ gostaria de reiniciar agora?",
-									"Configura√ß√£o",
+									"VocÍ gostaria de reiniciar agora?",
+									"ConfiguraÁ„o",
 									MB_ICONQUESTION | MB_YESNO | MB_SETFOREGROUND) == IDYES)
 						{
 							afterclose = 2;
@@ -802,7 +802,7 @@ BOOL CALLBACK ExportarDlgProc(  HWND   window,
 	return 0;
 }
 
-// Fun√ß√µes Internas
+// FunÁıes Internas
 //===========================================================================
 void ProcessaMenu(int ID, HWND window) {
 	switch(ID) {
@@ -836,8 +836,8 @@ void ProcessaMenu(int ID, HWND window) {
 			MessageBox(window,
 						"Emulador TK2000 para windows, baseado "
 						"no emulador Applewin por Michael O'Brien.\n\n"
-						"Parte do c√≥digo foi usado do emulador Applewin do Tom Charlesworth.\n\n"
-						"Adaptado por F√°bio Belavenuto, Copyright 2004.",
+						"Parte do cÛdigo foi usado do emulador Applewin do Tom Charlesworth.\n\n"
+						"Adaptado por F·bio Belavenuto, Copyright 2004.",
 						"Sobre o TK2000",
 						MB_OK | MB_ICONINFORMATION
 						);
@@ -926,13 +926,13 @@ void ProcessaMenu(int ID, HWND window) {
 					FrameMostraMensagemErro("Erro ao extrair!");
 				} else {
 					if (!OpenClipboard((HWND)framewindow)) {
-						FrameMostraMensagemErro("Erro ao abrir a √Årea de Transfer√™ncia");
+						FrameMostraMensagemErro("Erro ao abrir a ¡rea de TransferÍncia");
 						free(applesoft);
 					} else {
 						EmptyClipboard();
 						HGLOBAL hText = GlobalAlloc(GMEM_DDESHARE, strlen(applesoft)+1);
 						if (hText == NULL) {
-							FrameMostraMensagemErro("Erro ao abrir a √Årea de Transfer√™ncia");
+							FrameMostraMensagemErro("Erro ao abrir a ¡rea de TransferÍncia");
 							CloseClipboard();
 							free(applesoft);
 						} else {
@@ -942,12 +942,12 @@ void ProcessaMenu(int ID, HWND window) {
 							SetClipboardData(CF_TEXT, hText);
 							CloseClipboard();
 							free(applesoft);
-							FrameMostraMensagemAdvertencia("Copiado para √°rea de transfer√™ncia!");
+							FrameMostraMensagemAdvertencia("Copiado para ·rea de transferÍncia!");
 						}
 					}
 				}
 			} else {
-				FrameMostraMensagemErro("Somente no modo de execu√ß√£o");
+				FrameMostraMensagemErro("Somente no modo de execuÁ„o");
 			}
 
 			break;
@@ -1115,7 +1115,7 @@ void DrawStatusArea(HDC passdc, int drawflags) {
 
 			case MODE_STEPPING:
 				Som_Mute();
-				strcat(title," [Passo √† Passo]");
+				strcat(title," [Passo ‡ Passo]");
 			break;
 		}
 		SendMessage((HWND)framewindow,WM_SETTEXT,0,(LPARAM)title);
@@ -1346,9 +1346,9 @@ void FrameMostraMensagemErro(char *Mensagem) {
 }
 
 /*
- *  Fun√ß√µes Auxiliares
- *  Vers√£o 0.1
- *  by F√°bio Belavenuto
+ *  FunÁıes Auxiliares
+ *  Vers„o 0.1
+ *  by F·bio Belavenuto
  */
 //================================================================================
 int FramePerguntaInteiro(char *Titulo, int Default) {

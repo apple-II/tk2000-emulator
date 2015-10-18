@@ -1,21 +1,21 @@
 
 /*  Emulador do computador TK2000 (Microdigital)
- *  por FÃ¡bio Belavenuto - Copyright (C) 2004
+ *  por Fábio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo Ã© distribuido pela LicenÃ§a PÃºblica Geral GNU.
+ *  Este arquivo é distribuido pela Licença Pública Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE NÃƒO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE NÃO OFERECE NENHUMA GARANTIA
  *
  */
 
 #ifndef REGISTRO_H
 #define REGISTRO_H
 
-// DefiniÃ§Ãµes do registro
+// Definições do registro
 #define POSX         "Posicao X Janela"
 #define POSY         "Posicao Y Janela"
 #define PREFERENCIAS "Preferencias"
@@ -38,7 +38,7 @@
 #define ULTEXPENDI   "Ultimo End Inic Exportacao"
 #define ULTEXPENDF   "Ultimo End Final Exportacao"
 
-// ProtÃ³tipos
+// Protótipos
 int  RegLoadString (char*, char*, int, char*, DWORD);
 int  RegLoadValue  (char*, char*, int, DWORD *);
 void RegSaveString (char*, char*, int, char*);

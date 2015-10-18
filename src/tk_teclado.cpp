@@ -7,15 +7,15 @@
 ***/
 
 /*  Emulador do computador TK2000 (Microdigital)
- *  por FÃ¡bio Belavenuto - Copyright (C) 2004
+ *  por Fábio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo Ã© distribuido pela LicenÃ§a PÃºblica Geral GNU.
+ *  Este arquivo é distribuido pela Licença Pública Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE NÃƒO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE NÃO OFERECE NENHUMA GARANTIA
  *
  */
 
@@ -33,7 +33,7 @@
 #include "tk_impressora.h"
 #include "tk_disco.h"
 
-// DefiniÃ§Ãµes
+// Definições
 #define VK_IGUALMAIS  0xBB
 #define VK_VIRGULA    0xBC
 #define VK_MENOS      0xBD
@@ -60,7 +60,7 @@ typedef struct {
 
 const char caracs[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 /?.>,<;:@^+=-*)('&!\"#$%\x0D";
 
-// VariÃ¡veis
+// Variáveis
 BYTE  bKBOUT  = 0;
 int  ColarRapido = 0;
 
@@ -71,13 +71,13 @@ static BYTE  bCTRL   = 0;
 static bool  controlStatus = false;
 static TVk   Teclas[256];
 static Convs Conversoes[256];
-static unsigned char matriz[8];				/* Matriz que mantÃ©m o status de cada tecla pressionada, jÃ¡ no formato da matriz do TK2000 */
+static unsigned char matriz[8];				/* Matriz que mantém o status de cada tecla pressionada, já no formato da matriz do TK2000 */
 static bool g_bClipboardActive = false;
 static HGLOBAL hglb = NULL;
 static LPTSTR lptstr = NULL;
 
 
-/* FunÃ§Ãµes Internas */
+/* Funções Internas */
 //===========================================================================
 static void ClipboardDone() {
 	if (g_bClipboardActive) {
@@ -302,7 +302,7 @@ void KeybQueueKeypress (int key, BOOL down, BOOL ascii) {
 			ClipboardInitiatePaste();
 			return;
 		}
-		if (g_bClipboardActive)		/* NÃ£o inserir outras teclas enquanto estiver colando */
+		if (g_bClipboardActive)		/* Não inserir outras teclas enquanto estiver colando */
 			return;
 
 		switch(key) {
@@ -393,7 +393,7 @@ void KeybQueueKeypress (int key, BOOL down, BOOL ascii) {
 
 	key &= 0xFF;
 
-	// ConversÃµes de teclas:
+	// Conversões de teclas:
 
 	if (Conversoes[key].teclasub1 && !(shift < 0)) {
 		shift = Conversoes[key].onshift1 ? -1 : 0;
@@ -459,7 +459,7 @@ BYTE __stdcall KeybKBIN (WORD programcounter, BYTE address, BYTE write, BYTE val
 	}
 
 	if (ultCicloP) {
-		if ((g_nCumulativeCycles - ultCicloP) > 9777) {						/* MantÃ©m pressionada por 10 ms */
+		if ((g_nCumulativeCycles - ultCicloP) > 9777) {						/* Mantém pressionada por 10 ms */
 			if(*lptstr == 0) {
 				ClipboardDone();
 			} else {
@@ -495,7 +495,7 @@ BYTE __stdcall KeybKBIN (WORD programcounter, BYTE address, BYTE write, BYTE val
 				if(*lptstr == 0) {
 					ClipboardDone();
 					ultCicloP = 0;
-				} else if (romv == 2) {								/* Somente apÃ³s 3 leituras completas da ROM */
+				} else if (romv == 2) {								/* Somente após 3 leituras completas da ROM */
 					KeybQueueKeypress(ClipboardCurrChar(false), true, true);	/* Tecla pressionada */
 					ultCicloP = g_nCumulativeCycles;
 				}

@@ -7,19 +7,19 @@
 ***/
 
 /*  Emulador do computador TK2000 (Microdigital)
- *  por F√°bio Belavenuto - Copyright (C) 2004
+ *  por F·bio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo √© distribuido pela Licen√ßa P√∫blica Geral GNU.
+ *  Este arquivo È distribuido pela LicenÁa P˙blica Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE N√ÉO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE N√O OFERECE NENHUMA GARANTIA
  *
  */
 
-// Ofecere suporte a depura√ß√£o de programas
+// Ofecere suporte a depuraÁ„o de programas
 
 #include "tk_stdhdr.h"
 #include "tk_debug.h"
@@ -513,7 +513,7 @@ BOOL      usingwatches  = 0;
 BOOL      viewingoutput = 0;
 unsigned __int64 g_dCumulativeCycles = 0;
 
-// Prot√≥tipos
+// ProtÛtipos
 void ComputeTopOffset (WORD centeroffset);
 BOOL DisplayError (LPCTSTR errortext);
 BOOL DisplayHelp (cmdfunction function);
@@ -594,7 +594,7 @@ BOOL CmdBreakpointAdd (int args)
 			while ((freeslot < BREAKPOINTS) && breakpoint[freeslot].length)
 				freeslot++;
 			if ((freeslot >= BREAKPOINTS) && !addedone)
-				return DisplayError("Todos os slots de breakpointsest√£o em uso.");
+				return DisplayError("Todos os slots de breakpointsest„o em uso.");
 
 			// ADD THE BREAKPOINT
 			if (freeslot < BREAKPOINTS)
@@ -622,7 +622,7 @@ BOOL CmdBreakpointClear (int args)
 	if (!args)
 		return DisplayHelp(CmdBreakpointClear);
 	if (!usingbp)
-		return DisplayError("N√£o h√° breakpoints definidos.");
+		return DisplayError("N„o h· breakpoints definidos.");
 
 	// CLEAR EACH BREAKPOINT IN THE LIST
 	while (args)
@@ -659,7 +659,7 @@ BOOL CmdBreakpointDisable (int args) {
   if (!args)
     return DisplayHelp(CmdBreakpointDisable);
   if (!usingbp)
-    return DisplayError("N√£o h√° breakpoints definidos.");
+    return DisplayError("N„o h· breakpoints definidos.");
 
   // DISABLE EACH BREAKPOINT IN THE LIST
   while (args) {
@@ -683,7 +683,7 @@ BOOL CmdBreakpointEnable (int args) {
   if (!args)
     return DisplayHelp(CmdBreakpointEnable);
   if (!usingbp)
-    return DisplayError("N√£o h√° breakpoints definidos.");
+    return DisplayError("N„o h· breakpoints definidos.");
 
   // ENABLE EACH BREAKPOINT IN THE LIST
   while (args) {
@@ -1060,11 +1060,11 @@ BOOL CmdWatchAdd (int args) {
       while ((freeslot < WATCHES) && (watch[freeslot] >= 0))
         freeslot++;
       if ((freeslot >= WATCHES) && !addedone)
-        return DisplayError("Todos os slots de Watch est√£o em uso.");
+        return DisplayError("Todos os slots de Watch est„o em uso.");
 
       // VERIFY THAT THE WATCH IS NOT ON AN I/O LOCATION
       if ((arg[loop].val1 >= 0xC000) && (arg[loop].val1 <= 0xC0FF))
-        return DisplayError("Voc√™ n√£o pode ter um Watch em um endere√ßo de I/O.");
+        return DisplayError("VocÍ n„o pode ter um Watch em um endereÁo de I/O.");
 
       // ADD THE WATCH
       if (freeslot < WATCHES) {
@@ -1087,7 +1087,7 @@ BOOL CmdWatchClear (int args) {
   if (!args)
     return DisplayHelp(CmdWatchAdd);
   if (!usingwatches)
-    return DisplayError("N√£o h√° Watches definidos.");
+    return DisplayError("N„o h· Watches definidos.");
 
   // CLEAR EACH WATCH IN THE LIST
   while (args) {
@@ -1536,7 +1536,7 @@ BOOL ExecuteCommand (int args) {
     loop++;
   }
   if (found > 1)
-    return DisplayError("Comando √¢mb√≠guo");
+    return DisplayError("Comando ‚mbÌguo");
   else if (function)
     return function(args);
   else
@@ -1935,8 +1935,8 @@ void DebugInitialize () {
     infile = fopen(filename,"rt");
 	if (!infile) {
       MessageBox(GetDesktopWindow(),
-	             "Arquivo de S√≠mbolo " NOMEARQSYM " "
-	 			 "n√£o achado.",
+	             "Arquivo de SÌmbolo " NOMEARQSYM " "
+	 			 "n„o achado.",
 				 TITULO,
 				 MB_ICONEXCLAMATION | MB_SETFOREGROUND);
 	}
@@ -1953,8 +1953,8 @@ void DebugInitialize () {
         if (value)
           if (value < lastvalue) {
             MessageBox(GetDesktopWindow(),
-                       "O arquivo de s√≠mbolos n√£o est√° ordenado corretamente.\n"
-                       "Os s√≠mbolos n√£o ser√£o carregados.",
+                       "O arquivo de sÌmbolos n„o est· ordenado corretamente.\n"
+                       "Os sÌmbolos n„o ser„o carregados.",
                        TITULO,
                        MB_ICONEXCLAMATION | MB_SETFOREGROUND);
             FreeSymbolTable();
@@ -1982,8 +1982,8 @@ void DebugInitialize () {
               }
               else {
                 MessageBox(GetDesktopWindow(),
-                           "N√£o h√° mem√≥ria suficiente para carregar "
-                           "o arquivo de s√≠mbolos.",
+                           "N„o h· memÛria suficiente para carregar "
+                           "o arquivo de sÌmbolos.",
                            TITULO,
                            MB_ICONEXCLAMATION | MB_SETFOREGROUND);
                 FreeSymbolTable();

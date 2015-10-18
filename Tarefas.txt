@@ -1,6 +1,6 @@
 Lista de Tarefas:
 
- - Tirar opcodes da vers√£o 65C02
+ - Tirar opcodes da vers„o 65C02
  - Consertar mistura de cores
  - Implementar TK2000 de 128KB
  - Adicionar escolha de volume do som

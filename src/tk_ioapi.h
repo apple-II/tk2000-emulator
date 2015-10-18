@@ -72,3 +72,4 @@ void fill_fopen_filefunc OF((zlib_filefunc_def* pzlib_filefunc_def));
 #endif
 
 #endif
+

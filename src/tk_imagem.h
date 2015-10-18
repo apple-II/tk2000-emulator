@@ -1,14 +1,14 @@
 
 /*  Emulador do computador TK3000 //e (Microdigital)
- *  por FÃ¡bio Belavenuto - Copyright (C) 2004
+ *  por Fábio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo Ã© distribuido pela LicenÃ§a PÃºblica Geral GNU.
+ *  Este arquivo é distribuido pela Licença Pública Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE NÃƒO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE NÃO OFERECE NENHUMA GARANTIA
  *
  */
 
@@ -17,7 +17,7 @@
 
 #include "tk_main.h"
 
-// DefiniÃ§Ãµes Gerais
+// Definições Gerais
 #define	 TRACKS		35
 #define	 VOLUME		254
 
@@ -38,7 +38,7 @@ typedef	struct _imageinforec
 	int   Mudado;				// Flag file changed
 } imageinforec,	*imageinfoptr;
 
-// ProtÃ³tipos
+// Protótipos
 int	 ImageBoot(HIMAGE);
 void ImageClose(HIMAGE);
 void ImageDestroy();

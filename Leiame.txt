@@ -3,20 +3,20 @@
 
   Este programa emula o hardware do computador TK2000, clone do MPF II, fabricado no Brasil pela Microdigital em 1985.
 
-  Este programa Ã© continuaÃ§Ã£o do emulador Applewin por Michael O'Brien. Parte do cÃ³digo foi usado do emulador Applewin do Tom Charlesworth.
+  Este programa é continuação do emulador Applewin por Michael O'Brien. Parte do código foi usado do emulador Applewin do Tom Charlesworth.
 
-  Este software Ã© distribuido pela LicenÃ§a PÃºblica Geral GNU.
+  Este software é distribuido pela Licença Pública Geral GNU.
   Veja o arquivo Licenca.txt distribuido com este software.
-  ESTE SOFTWARE NÃƒO OFERECE NENHUMA GARANTIA
+  ESTE SOFTWARE NÃO OFERECE NENHUMA GARANTIA
 
-COMPILAÃ‡ÃƒO:
-  Se vocÃª tiver os cÃ³digos fontes:
-  VocÃª deve ter o Microsoft(r) Visual Studio(r) 6.0 instalado, o Microsoft(r) DirectX(r) 9.0 SDK instalado e o Microsoft(r) HTML Help Workshop instalado.
-  Abra o arquivo TK2000.dsw no Visual Studio, escolha o tipo de executÃ¡vel (Debug ou Release) e mande compilar (Build/Build TK2000.exe)
-  Para criar um arquivo de instalaÃ§Ã£o vocÃª deve ter o NSIS (Nullsoft(r) Scriptable Installation System) e compilar o script Instalador.nsi
+COMPILAÇÃO:
+  Se você tiver os códigos fontes:
+  Você deve ter o Microsoft(r) Visual Studio(r) 6.0 instalado, o Microsoft(r) DirectX(r) 9.0 SDK instalado e o Microsoft(r) HTML Help Workshop instalado.
+  Abra o arquivo TK2000.dsw no Visual Studio, escolha o tipo de executável (Debug ou Release) e mande compilar (Build/Build TK2000.exe)
+  Para criar um arquivo de instalação você deve ter o NSIS (Nullsoft(r) Scriptable Installation System) e compilar o script Instalador.nsi
 
-INSTALAÃ‡ÃƒO:
-  Execute o instalador(TK2000-(versÃ£o)-Instalador.exe) e siga as instruÃ§Ãµes na tela.
+INSTALAÇÃO:
+  Execute o instalador(TK2000-(versão)-Instalador.exe) e siga as instruções na tela.
 
 BUGS:
   Favor ler o arquivo "Tarefas.txt"
@@ -27,5 +27,5 @@ CONTATANDO O AUTOR:
 
 COPYRIGHT:
   Copyright (C) 1994-96, Michael O'Brien. All rights reserved.
-  FÃ¡bio Belavenuto - Copyright (C) 2004
+  Fábio Belavenuto - Copyright (C) 2004
   Copyright (C) 2003-2004 Tom Charlesworth

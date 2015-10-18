@@ -1,0 +1,291 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "resource.h"
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Portuguese (Brazil) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PTB)
+#ifdef _WIN32
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+DIALOGO_CONFIG DIALOG DISCARDABLE  0, 0, 215, 170
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Configuração"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Controle de Velocidade do Emulador",IDC_STATIC,4,99,200,
+                    66
+    CONTROL         "Usar Velocidade Real da Máquina",rbVelReal,"Button",
+                    BS_AUTORADIOBUTTON,14,110,137,10
+    CONTROL         "Selecionar Outra Velocidade (em MHz)",rbOutraVel,"Button",
+                    BS_AUTORADIOBUTTON,14,123,138,10
+    CONTROL         "Generic2",slVel,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    WS_TABSTOP,24,134,160,15
+    CTEXT           "0.5",121,26,150,20,10
+    CTEXT           "1.0",122,58,150,20,10
+    CTEXT           "2.0",123,94,150,20,10
+    RTEXT           "Rápido",124,148,150,29,10
+    DEFPUSHBUTTON   "OK",IDOK,157,12,50,15
+    PUSHBUTTON      "Cancelar",IDCANCEL,157,30,50,15
+    RTEXT           "&Video:",IDC_STATIC,22,6,24,8
+    COMBOBOX        cbVideo,53,4,100,100,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "&Joystick:",IDC_STATIC,13,22,33,8
+    COMBOBOX        cbJoystick,53,19,100,100,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "&Som:",IDC_STATIC,26,36,20,8
+    COMBOBOX        cbSom,53,34,100,100,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "&Impressora:",IDC_STATIC,6,51,40,8
+    COMBOBOX        cbImpressora,53,49,100,100,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Redefinir",btnRedefine,157,48,50,14
+    RTEXT           "&Expansão:",IDC_STATIC,8,66,38,8
+    COMBOBOX        cbExpansao,53,65,100,100,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "&Disco:",IDC_STATIC,22,82,24,8
+    COMBOBOX        cbDisco,53,81,100,100,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Scan Lines",cbScanLines,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,158,83,51,10
+
+	CONTROL         "Colar Rápido",cbColarRapido,"Button",BS_AUTOCHECKBOX |
+					WS_TABSTOP,158,67,53,10
+END
+
+DIALOGO_EXPORTAR DIALOGEX 0, 0, 194, 69
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Exportar da Memória para Arquivo"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,137,9,50,14
+    PUSHBUTTON      "Cancelar",IDCANCEL,137,27,50,14
+    RTEXT           "Endereço Inicial:",IDC_STATIC,3,13,58,8
+    RTEXT           "Endereço Final:",IDC_STATIC,11,30,50,8
+    EDITTEXT        edtExpEndInicial,66,9,62,15,0,WS_EX_DLGMODALFRAME
+    EDITTEXT        edtExpEndFinal,66,27,62,15,ES_AUTOHSCROLL,
+                    WS_EX_DLGMODALFRAME
+    LTEXT           "OBS: Os endereços devem estar no intervalo de 0 à 49151 ($BFFF). Valores em decimal ou hexa.",
+                    IDC_STATIC,8,47,173,18
+END
+
+DIALOGO_IMPORTAR DIALOGEX 0, 0, 194, 69
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Importar de arquivo para a memória"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,137,9,50,14
+    PUSHBUTTON      "Cancelar",IDCANCEL,137,27,50,14
+    RTEXT           "Endereço Inicial:",IDC_STATIC,3,13,58,8
+    EDITTEXT        edtImpEndInicial,63,9,62,16,ES_AUTOHSCROLL,
+                    WS_EX_DLGMODALFRAME
+    LTEXT           "OBS: Os endereços devem estar no intervalo de 0 à 49151 ($BFFF). Valores em decimal ou hexa.",
+                    IDC_STATIC,8,47,173,18
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,0,0,1
+ PRODUCTVERSION 0,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "04160000"
+        BEGIN
+            VALUE "Comments", "http://codigolivre.org.br/projects/tk2000\0"
+            VALUE "CompanyName", "Fábio Belavenuto\0"
+            VALUE "FileDescription", "Emulador TK2000 para Windows\0"
+            VALUE "FileVersion", "0.0.0.1\0"
+            VALUE "InternalName", "TK2000\0"
+            VALUE "LegalCopyright", "Copyright 2004 Fábio Belavenuto\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "TK2000.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Emulador TK2000\0"
+            VALUE "ProductVersion", "0.0.0.1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x416, 0
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    "DIALOGO_CONFIG", DIALOG
+    BEGIN
+        RIGHTMARGIN, 214
+        VERTGUIDE, 46
+        VERTGUIDE, 53
+        BOTTOMMARGIN, 169
+    END
+
+    "DIALOGO_EXPORTAR", DIALOG
+    BEGIN
+        RIGHTMARGIN, 187
+        VERTGUIDE, 61
+        VERTGUIDE, 66
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+ICONE_TK2000            ICON    DISCARDABLE     "TK2000.ICO"
+XDISCK                  ICON    DISCARDABLE     "DISCO.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&Arquivo"
+    BEGIN
+        MENUITEM "&Iniciar/Resetar CPU (F5)",   mnuResetar
+        MENUITEM "&Depurar (F2)",               mnuDepurar
+        MENUITEM "&Configurar (F3)",            mnuConfig
+        MENUITEM "&Escolher Cor do Texto",      mnuCor
+        MENUITEM SEPARATOR
+        MENUITEM "Sai&r",                       mnuSair
+    END
+    POPUP "&Discos"
+    BEGIN
+        MENUITEM "Inserir Disco &1 (F6)",       mnuDisco1, GRAYED
+        MENUITEM "Remover Disco 1",             mnuRemDisco1, GRAYED
+        MENUITEM "Volume do Disco 1",           mnuVolDisco1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Inserir Disco &2 (F7)",       mnuDisco2, GRAYED
+        MENUITEM "Remover Disco 2",             mnuRemDisco2, GRAYED
+        MENUITEM "Volume do Disco 2",           mnuVolDisco2, GRAYED
+    END
+    POPUP "&Tape"
+    BEGIN
+        MENUITEM "&Inserir (F4)",               mnuTapeInserir
+        MENUITEM "R&emover",                    mnuTapeRemove
+        MENUITEM SEPARATOR
+        MENUITEM "&Stop",                       mnuTapeStop
+        MENUITEM "&Rew",                        mnuTapeRew
+    END
+    POPUP "&Memória"
+    BEGIN
+        MENUITEM "&Importar...",                mnuImportar
+        MENUITEM "&Exportar...",                mnuExportar
+    END
+    POPUP "&Utilitários"
+    BEGIN
+        MENUITEM "&Extrair programa BASIC atual", mnuExtrairBasic
+    END
+    POPUP "A&juda"
+    BEGIN
+        MENUITEM "Conteúdo (F1)",               mnuAjuda
+        MENUITEM "&Sobre",                      mnuSobre
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""resource.h""\r\n"
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+LED_VM                  BITMAP  DISCARDABLE     "LedRed.bmp"
+LED_VD                  BITMAP  DISCARDABLE     "LedGreen.bmp"
+LED_OFF                 BITMAP  DISCARDABLE     "LedOff.bmp"
+#endif    // Portuguese (Brazil) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

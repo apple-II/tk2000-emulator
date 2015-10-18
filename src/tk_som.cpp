@@ -7,19 +7,19 @@
 ***/
 
 /*  Emulador do computador TK2000 (Microdigital)
- *  por F√°bio Belavenuto - Copyright (C) 2004
+ *  por F·bio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo √© distribuido pela Licen√ßa P√∫blica Geral GNU.
+ *  Este arquivo È distribuido pela LicenÁa P˙blica Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE N√ÉO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE N√O OFERECE NENHUMA GARANTIA
  *
  */
 
-// Fun√ß√µes para manipula√ß√£o do registro do Windows
+// FunÁıes para manipulaÁ„o do registro do Windows
 
 #include <crtdbg.h>
 #include "tk_stdhdr.h"
@@ -41,14 +41,14 @@
 // their buffers are running low.
 //
 
-// Defini√ß√µes
+// DefiniÁıes
 #define  SOUND_NONE    0
 #define  SOUND_DIRECT  1
 #define  SOUND_SMART   2
 #define  SOUND_WAVE    3
 
 
-// Vari√°veis
+// Vari·veis
 static short*	g_pSpeakerBuffer = NULL;
 bool            g_bSpkrToggleFlag = false;
 
@@ -283,21 +283,21 @@ BOOL SpkrSetEmulationType(HWND window, DWORD newtype)
 
 			case SOUND_DIRECT:
 				MessageBox(window,
-							"Emula√ß√£o direta n√£o √© poss√≠vel por causa do "
-							"sistema operacional que voc√™ est√° usando n√£o "
+							"EmulaÁ„o direta n„o È possÌvel por causa do "
+							"sistema operacional que vocÍ est· usando n„o "
 							"permite acesso direto ao speaker.",
-							"Configura√ß√£o",
+							"ConfiguraÁ„o",
 							MB_ICONEXCLAMATION | MB_SETFOREGROUND);
 				return 0;
 
 			case SOUND_WAVE:
 				MessageBox(window,
-							"O emulador n√£o conseguiu inicializar um dispositivo "
-							"de sa√≠da de som. Verifique se voc√™ tem uma placa de "
-							"som instalada e se ela est√° configurada corretamente.\n"
-							"Verifique tamb√©m se nenhum outro programa n√£o est√° "
+							"O emulador n„o conseguiu inicializar um dispositivo "
+							"de saÌda de som. Verifique se vocÍ tem uma placa de "
+							"som instalada e se ela est· configurada corretamente.\n"
+							"Verifique tambÈm se nenhum outro programa n„o est· "
 							"usando a placa de som.",
-							"Configura√ß√£o",
+							"ConfiguraÁ„o",
 							MB_ICONEXCLAMATION | MB_SETFOREGROUND);
 				return 0;
 

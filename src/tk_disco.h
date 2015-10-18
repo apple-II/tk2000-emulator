@@ -1,24 +1,24 @@
 
 /*  Emulador do computador TK3000 //e (Microdigital)
- *  por FÃ¡bio Belavenuto - Copyright (C) 2004
+ *  por Fábio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo Ã© distribuido pela LicenÃ§a PÃºblica Geral GNU.
+ *  Este arquivo é distribuido pela Licença Pública Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE NÃƒO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE NÃO OFERECE NENHUMA GARANTIA
  *
  */
 
 #ifndef DISCO_H
 #define DISCO_H
 
-// VariÃ¡veis Externas
+// Variáveis Externas
 extern BOOL	  enhancedisk;
 
-// ProtÃ³tipos
+// Protótipos
 int  DiscoConfiguraSlotAux();
 void DiscoRetiraSlotAux();
 void DiskBoot ();
@@ -36,7 +36,7 @@ void DiskReset ();
 void DiskSelect (int);
 void DiskUpdatePosition (DWORD);
 
-// ProtÃ³tipos Softswitches
+// Protótipos Softswitches
 BYTE __stdcall DiskControlMotor	(WORD,BYTE,BYTE,BYTE);
 BYTE __stdcall DiskControlStepper (WORD,BYTE,BYTE,BYTE);
 BYTE __stdcall DiskEnable (WORD,BYTE,BYTE,BYTE);

@@ -1,25 +1,25 @@
 
 /*  Emulador do computador TK2000 (Microdigital)
- *  por FÃ¡bio Belavenuto - Copyright (C) 2004
+ *  por Fábio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo Ã© distribuido pela LicenÃ§a PÃºblica Geral GNU.
+ *  Este arquivo é distribuido pela Licença Pública Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE NÃƒO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE NÃO OFERECE NENHUMA GARANTIA
  *
  */
 
 #ifndef SOM_H
 #define SOM_H
 
-// VariÃ¡veis Externas
+// Variáveis Externas
 extern DWORD  soundtype;
 extern double g_fClksPerSpkrSample;
 
-// ProtÃ³tipos
+// Protótipos
 void SpkrDestroy ();
 void SpkrInitialize ();
 void SpkrReinitialize ();
@@ -31,7 +31,7 @@ static void UpdateRemainderBuffer(LONG* pnCycleDiff);
 
 void SpkrUpdate (DWORD);
 
-// ProtÃ³tipos Softswitches
+// Protótipos Softswitches
 BYTE __stdcall SpkrToggle (WORD,BYTE,BYTE,BYTE);
 
 #endif

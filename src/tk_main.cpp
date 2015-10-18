@@ -7,19 +7,19 @@
 ***/
 
 /*  Emulador do computador TK2000 (Microdigital)
- *  por FÃ¡bio Belavenuto - Copyright (C) 2004
+ *  por Fábio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo Ã© distribuido pela LicenÃ§a PÃºblica Geral GNU.
+ *  Este arquivo é distribuido pela Licença Pública Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE NÃƒO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE NÃO OFERECE NENHUMA GARANTIA
  *
  */
 
-// MÃ³dulo Principal
+// Módulo Principal
 
 #include "tk_stdhdr.h"
 #include "tk_main.h"
@@ -39,10 +39,10 @@
 #include "tk_disco.h"
 #include "tk_imagem.h"
 
-// DefiniÃ§Ãµes:
+// Definições:
 #define REGISTRAREXTENSOES
 
-// VariÃ¡veis:
+// Variáveis:
 #ifdef CPUDEBUG
 FILE *arquivocpu;
 #endif
@@ -70,7 +70,7 @@ unsigned __int64 g_nCumulativeCycles = 0;
 double g_fMHz            = 1.0;	// Affected by Config dialog's speed slider bar
 FILE*  g_fh              = NULL;
 
-// FunÃ§Ãµes:
+// Funções:
 //===========================================================================
 void ContinueExecution ()
 {
@@ -103,7 +103,7 @@ void ContinueExecution ()
 
 	cyclenum = executedcycles;
 	
-	// AtualizaÃ§Ãµes:
+	// Atualizações:
 	KeybAtualiza(executedcycles);
 	DiskUpdatePosition(executedcycles);
 	JoyUpdatePosition(executedcycles);

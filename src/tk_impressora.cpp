@@ -7,15 +7,15 @@
 ***/
 
 /*  Emulador do computador TK2000 (Microdigital)
- *  por FÃ¡bio Belavenuto - Copyright (C) 2004
+ *  por Fábio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo Ã© distribuido pela LicenÃ§a PÃºblica Geral GNU.
+ *  Este arquivo é distribuido pela Licença Pública Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE NÃƒO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE NÃO OFERECE NENHUMA GARANTIA
  *
  */
 
@@ -28,19 +28,19 @@
 #include "tk_memoria.h"
 #include "tk_janela.h"
 
-// DefiniÃ§Ãµes
+// Definições
 #define NOMEARQUIVO	"impressora.txt"
 
-// VariÃ¡veis
+// Variáveis
 BYTE	ImpressoraPorta			= 0;
 FILE	*ArqImpressora			= NULL;
 DWORD	InatividadeImpressora	= 0;
 int		MaxH					= 40;
 
-// ProtÃ³tipos
+// Protótipos
 BOOL ChecarImpressora();
 
-// FunÃ§Ãµes Internas
+// Funções Internas
 //===========================================================================
 BOOL ChecarImpressora()
 {
@@ -72,7 +72,7 @@ BOOL ChecarImpressora()
 	return (ArqImpressora != NULL);
 }
 
-// FunÃ§Ãµes Globais
+// Funções Globais
 
 //===========================================================================
 void ImpressoraInicializa()
@@ -113,7 +113,7 @@ void ImpressoraDefinePorta(int Porta)
 	if (ArqImpressora == NULL)
 		ImpressoraPorta = Porta;
 	else
-		FrameMostraMensagemAdvertencia("VocÃª nÃ£o pode mudar a porta da impressora "
+		FrameMostraMensagemAdvertencia("Você não pode mudar a porta da impressora "
 										"enquanto ela estiver em uso.");
 }
 

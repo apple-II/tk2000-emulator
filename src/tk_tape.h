@@ -1,21 +1,21 @@
 
 /*  Emulador do computador TK2000 (Microdigital)
- *  por FÃ¡bio Belavenuto - Copyright (C) 2004
+ *  por Fábio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo Ã© distribuido pela LicenÃ§a PÃºblica Geral GNU.
+ *  Este arquivo é distribuido pela Licença Pública Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE NÃƒO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE NÃO OFERECE NENHUMA GARANTIA
  *
  */
 
 #ifndef TAPE_H
 #define TAPE_H
 
-// DefiniÃ§Ãµes
+// Definições
 #define TB_REW  0x01
 #define TB_STOP	0x02
 
@@ -47,7 +47,7 @@ typedef struct SCh
 
 #include <poppack.h>
 
-// ProtÃ³tipos
+// Protótipos
 void TapeFinaliza();
 void TapeInicializa();
 void TapeAtualiza(DWORD);
@@ -59,7 +59,7 @@ void TapeNotifyInvalidImage (char*, int);
 char *TapeNomeImagem();
 void TapePegaStatusLed(int *);
 
-// ProtÃ³tipos Softswitches
+// Protótipos Softswitches
 BYTE __stdcall TapeMOTOR(WORD, BYTE, BYTE, BYTE);
 BYTE __stdcall TapeCASOUT(WORD, BYTE, BYTE, BYTE);
 BYTE __stdcall TapeCASIN(WORD, BYTE, BYTE, BYTE);

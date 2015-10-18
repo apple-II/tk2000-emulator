@@ -7,15 +7,15 @@
 ***/
 
 /*  Emulador do computador TK2000 (Microdigital)
- *  por F√°bio Belavenuto - Copyright (C) 2004
+ *  por F·bio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo √© distribuido pela Licen√ßa P√∫blica Geral GNU.
+ *  Este arquivo È distribuido pela LicenÁa P˙blica Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE N√ÉO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE N√O OFERECE NENHUMA GARANTIA
  *
  */
 
@@ -42,7 +42,7 @@
 #define  SHORTOPCODES  22
 #define  BENCHOPCODES  33
 
-// Vari√°veis
+// Vari·veis
 
 //DWORD  cpuemtype = CPU_COMPILING;
 regsrec regs;
@@ -109,7 +109,7 @@ int     flagsint  = 0;
 #define ZPGX     addr = (mem_readb(regs.pc++, 1)+regs.x) & 0xFF;
 #define ZPGY     addr = (mem_readb(regs.pc++, 1)+regs.y) & 0xFF;
 
-// Verifica se houve mudan√ßa de p√°gina, adicionando um ciclo extra
+// Verifica se houve mudanÁa de p·gina, adicionando um ciclo extra
 #define BRANCHTAKEN	WORD pca = (regs.pc & 0xFF00);	 						\
 					regs.pc += addr;										\
 					if ((regs.pc & 0xFF00) != pca) { CYC(1) }

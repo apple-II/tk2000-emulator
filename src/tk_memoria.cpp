@@ -7,19 +7,19 @@
 ***/
 
 /*  Emulador do computador TK2000 (Microdigital)
- *  por F√°bio Belavenuto - Copyright (C) 2004
+ *  por F·bio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo √© distribuido pela Licen√ßa P√∫blica Geral GNU.
+ *  Este arquivo È distribuido pela LicenÁa P˙blica Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE N√ÉO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE N√O OFERECE NENHUMA GARANTIA
  *
  */
 
-// Gerencia a mem√≥ria
+// Gerencia a memÛria
 
 #include "tk_stdhdr.h"
 #include "tk_main.h"
@@ -587,19 +587,19 @@ void ResetPaging (BOOL initialize)
 	UpdatePaging(initialize, 0);
 }
 
-// Atualiza Mem√≥ria
+// Atualiza MemÛria
 //===========================================================================
 void UpdatePaging (BOOL initialize, BOOL updatewriteonly)
 {
 	int loop;
 
 	// UPDATE THE PAGING TABLES BASED ON THE NEW PAGING SWITCH VALUES
-	for (loop = 0; loop <= 0xBF; loop++)		// 0x0000 √† 0xBFFF
+	for (loop = 0; loop <= 0xBF; loop++)		// 0x0000 ‡ 0xBFFF
 	{
 		memread[loop]  = memmain+(loop << 8);
 		memwrite[loop] = memmain+(loop << 8);
 	}
-	for (loop = 0xC1; loop <= 0xC2; loop++)		// 0xC100 √† 0xC200
+	for (loop = 0xC1; loop <= 0xC2; loop++)		// 0xC100 ‡ 0xC200
 	{
 		memread[loop]  = SlotAux    ? memslot+(loop << 8)-0xC100
 									: SW_RAMROM16 ? memrom+(loop << 8)-0xC000
@@ -609,7 +609,7 @@ void UpdatePaging (BOOL initialize, BOOL updatewriteonly)
 												: memmain+(loop << 8);
 	}
 
-	for (loop = 0xC2; loop <= 0xFF; loop++)		// 0xC200 √† 0xFFFF
+	for (loop = 0xC2; loop <= 0xFF; loop++)		// 0xC200 ‡ 0xFFFF
 	{
 		memread[loop]  = SW_RAMROM16 ? memrom+(loop << 8)-0xC000
 									: memmain+(loop << 8);
@@ -688,7 +688,7 @@ int MemInsereSlotAux(  iofunction ioarrayread[0x10],
 		file = fopen(Caminho, "rb");
 		if (file == NULL)
 		{
-			sprintf(temp1, "O firmware %s n√£o foi achado.", NomeFirmware);
+			sprintf(temp1, "O firmware %s n„o foi achado.", NomeFirmware);
 			FrameMostraMensagemErro(temp1);
 			return 0;	// Retorna erro
 		}
@@ -749,7 +749,7 @@ BOOL MemImportar(WORD EndInicial)
 		TamMem = ftell(Arquivo);
 		if ((EndInicial+TamMem) > 0xC000)
 		{
-			FrameMostraMensagemErro("O conte√∫do do arquivo excede a capacidade de mem√≥ria do TK2000");
+			FrameMostraMensagemErro("O conte˙do do arquivo excede a capacidade de memÛria do TK2000");
 			return -1;
 		}
 		Buffer = (char *)malloc(TamMem);
@@ -943,8 +943,8 @@ void MemInitialize ()
 	memslot    = (BYTE*)malloc(0x000100); //VirtualAlloc(NULL,0x5000 ,MEM_COMMIT,PAGE_READWRITE);
 	if (/*(!memaux) || */(!memdirty) ||	(!memmain) || (!memrom) || (!memslot))
 	{
-		FrameMostraMensagemErro("N√£o foi poss√≠vel alocar mem√≥ria para o emulador.\n"
-				"A execu√ß√£o n√£o ser√° poss√≠vel.");
+		FrameMostraMensagemErro("N„o foi possÌvel alocar memÛria para o emulador.\n"
+				"A execuÁ„o n„o ser· possÌvel.");
 		exit(1);
 	}
 
@@ -956,7 +956,7 @@ void MemInitialize ()
 	file = fopen(filename, "rb");
 	if (file == NULL)
 	{
-		FrameMostraMensagemErro("A imagem de ROM n√£o foi achada: "NOMEARQROM".");
+		FrameMostraMensagemErro("A imagem de ROM n„o foi achada: "NOMEARQROM".");
 		exit(1);
 	}
 	fread(memrom, 0x4000, 1, file);

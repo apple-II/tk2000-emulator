@@ -1,27 +1,27 @@
 
 /*  Emulador do computador TK2000 (Microdigital)
- *  por FÃ¡bio Belavenuto - Copyright (C) 2004
+ *  por Fábio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo Ã© distribuido pela LicenÃ§a PÃºblica Geral GNU.
+ *  Este arquivo é distribuido pela Licença Pública Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE NÃƒO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE NÃO OFERECE NENHUMA GARANTIA
  *
  */
 
 #ifndef MEMORIA_H
 #define MEMORIA_H
 
-// DefiniÃ§Ãµes Gerais
+// Definições Gerais
 BYTE __stdcall NullIo (WORD programcounter, BYTE address, BYTE write, BYTE value);
 
-// DefiniÃ§Ãµes de Tipos
+// Definições de Tipos
 typedef	BYTE (__stdcall	*iofunction)(WORD,BYTE,BYTE,BYTE);
 
-// VariÃ¡veis Externas
+// Variáveis Externas
 extern iofunction ioread[0x100];
 extern iofunction iowrite[0x100];
 //extern BYTE* memaux;
@@ -32,7 +32,7 @@ extern BYTE* memwrite[0x100];
 extern BYTE	 SlotAux;
 extern BYTE  NewSlotAux;
 
-// ProtÃ³tipos
+// Protótipos
 int   MemAtualizaSlotAux(void);
 int   MemRetiraSlotAux();
 int   MemInsereSlotAux(iofunction[0x10], iofunction[0x10],char*);
@@ -49,7 +49,7 @@ BOOL  MemImportar(WORD);
 BOOL  MemExportar(WORD,WORD);
 void  MemResetPaging();
 
-// ProtÃ³tipos Softswitches
+// Protótipos Softswitches
 BYTE __stdcall MemCheckPaging (WORD,BYTE,BYTE,BYTE);
 BYTE __stdcall MemSetPaging (WORD,BYTE,BYTE,BYTE);
 

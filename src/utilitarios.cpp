@@ -7,19 +7,19 @@
 ***/
 
 /*  Emulador do computador TK3000 //e (Microdigital)
- *  por FÃ¡bio Belavenuto - Copyright (C) 2004
+ *  por Fábio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo Ã© distribuido pela LicenÃ§a PÃºblica Geral GNU.
+ *  Este arquivo é distribuido pela Licença Pública Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE NÃƒO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE NÃO OFERECE NENHUMA GARANTIA
  *
  */
 
-// UtilitÃ¡rios gerais
+// Utilitários gerais
 
 #include "tk_stdhdr.h"
 #include "tk_memoria.h"
@@ -44,7 +44,7 @@ const char applesoft_tokens[][25] = {
 /* F8 */ " RE'DIM' DE ARRAY ", " DIVISAO POR ZERO ", " COMANDO ILEGAL ", " INCOPATIVEL ", " EXCEDE STRING ", " FORMULA MUITO COMPLEXA ", " IMPOSSIVEL ", ""
 };
 
-/* VariÃ¡veis internas */
+/* Variáveis internas */
 BYTE* page;
 WORD  addr;
 WORD initAddress = 0x0801;		// Applesoft initial address
@@ -54,9 +54,9 @@ char *buffer = NULL;
 unsigned int len = 0, size = 1024*1024; // 1MB
 
 
-/* funÃ§Ãµes internas */
+/* funções internas */
 
-/* Acesso direto Ã  memÃ³ria */
+/* Acesso direto à memória */
 BYTE dreadb() {
 	BYTE  result = 0;
 
@@ -95,7 +95,7 @@ void addBuffer(char *text) {
 	strcat(buffer, text);
 }
 
-/* funÃ§Ãµes globais */
+/* funções globais */
 char *UtilExtrairApplesoft() {
 	char line[1024];
 	unsigned char ch;

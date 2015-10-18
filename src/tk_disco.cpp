@@ -7,15 +7,15 @@
 ***/
 
 /*  Emulador do computador TK3000 //e (Microdigital)
- *  por F√°bio Belavenuto - Copyright (C) 2004
+ *  por F·bio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo √© distribuido pela Licen√ßa P√∫blica Geral GNU.
+ *  Este arquivo È distribuido pela LicenÁa P˙blica Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE N√ÉO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE N√O OFERECE NENHUMA GARANTIA
  *
  */
 
@@ -52,7 +52,7 @@ typedef struct _floppyrec {
 	int    nibbles;
 } floppyrec, *floppyptr;
 
-// Vari√°veis
+// Vari·veis
 int			currdrive       = 0;
 BOOL		diskaccessed    = 0;
 BOOL		enhancedisk     = 1;
@@ -185,7 +185,7 @@ int DiscoConfiguraSlotAux() {
 	ioarraywrite[0x0F] = DiskSetWriteMode;
 
 	if (MemInsereSlotAux(ioarrayread, ioarraywrite, "Disco")) {
-		// N√£o teve erro;
+		// N„o teve erro;
 		SlotInserido = 1;
 		FrameMenuDiskete(1);
 		return 1;
@@ -318,7 +318,7 @@ void DiskNotifyInvalidImage (char* imagefilename,int error) {
 		case 2:
 			sprintf(buffer,
 					"Erro ao abrir o arquivo %s.\nO formato "
-					"da imagem do disco n√£o foi reconhecido.",
+					"da imagem do disco n„o foi reconhecido.",
 					(char*)imagefilename);
 			FrameMostraMensagemAdvertencia(buffer);
 		break;

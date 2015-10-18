@@ -1,21 +1,21 @@
 
 /*  Emulador do computador TK2000 (Microdigital)
- *  por FÃ¡bio Belavenuto - Copyright (C) 2004
+ *  por Fábio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo Ã© distribuido pela LicenÃ§a PÃºblica Geral GNU.
+ *  Este arquivo é distribuido pela Licença Pública Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE NÃƒO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE NÃO OFERECE NENHUMA GARANTIA
  *
  */
 
 #ifndef VIDEO_H
 #define VIDEO_H
 
-// DefiniÃ§Ãµes
+// Definições
 enum VIDEOTYPE
 {
 	VT_MONO=0,
@@ -25,7 +25,7 @@ enum VIDEOTYPE
 	VT_NUM_MODES
 };
 
-// VariÃ¡veis Externas
+// Variáveis Externas
 extern BOOL		behind;
 extern DWORD	emulmsec;
 extern BOOL		graphicsmode;	
@@ -38,7 +38,7 @@ extern DWORD	emulmsec_frac;
 extern int		ScanLines;
 
 
-// ProtÃ³tipos
+// Protótipos
 BOOL	VideoApparentlyDirty ();
 void	VideoCheckPage (BOOL);
 void	VideoChooseColor ();
@@ -54,7 +54,7 @@ void	VideoResetState	();
 //void	VideoUpdateVbl (DWORD,BOOL);
 void	CreateColorMixMap();
 
-// ProtÃ³tipos Softswitches
+// Protótipos Softswitches
 BYTE __stdcall VideoCheckMode (WORD,BYTE,BYTE,BYTE);
 BYTE __stdcall VideoCheckVbl (WORD,BYTE,BYTE,BYTE);
 BYTE __stdcall VideoSetMode (WORD,BYTE,BYTE,BYTE);

@@ -7,19 +7,19 @@
 ***/
 
 /*  Emulador do computador TK2000 (Microdigital)
- *  por FÃ¡bio Belavenuto - Copyright (C) 2004
+ *  por Fábio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo Ã© distribuido pela LicenÃ§a PÃºblica Geral GNU.
+ *  Este arquivo é distribuido pela Licença Pública Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE NÃƒO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE NÃO OFERECE NENHUMA GARANTIA
  *
  */
 
-// Emula o vÃ­deo
+// Emula o vídeo
 
 #include "tk_stdhdr.h"
 #include "tk_main.h"
@@ -115,7 +115,7 @@
 
 #define  HGR_MATRIX_YOFFSET 2	// For tv emulation mode
 
-// PosiÃ§Ãµes na memÃ³ria:
+// Posições na memória:
 #define  PAG1OFFSET   0x2000
 #define  PAG2OFFSET   0xA000
 #define  VIDEOLENGTH  0x2000
@@ -892,8 +892,8 @@ void VideoDisplayLogo ()
 #define  DRAWVERSION(x,y,c)		SetTextColor(framedc,c);                \
 								TextOut(framedc,                        \
 										540+x,358+y,                    \
-										"VersÃ£o " VERSIONSTRING,		\
-										strlen("VersÃ£o " VERSIONSTRING));
+										"Versão " VERSIONSTRING,		\
+										strlen("Versão " VERSIONSTRING));
 
 	if (GetDeviceCaps(framedc,PLANES) * GetDeviceCaps(framedc,BITSPIXEL) <= 4)
 	{

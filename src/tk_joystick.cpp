@@ -7,15 +7,15 @@
 ***/
 
 /*  Emulador do computador TK2000 (Microdigital)
- *  por F√°bio Belavenuto - Copyright (C) 2004
+ *  por F·bio Belavenuto - Copyright (C) 2004
  *
  *  Adaptado do emulador Applewin por Michael O'Brien
  *  Part of code is Copyright (C) 2003-2004 Tom Charlesworth
  *
- *  Este arquivo √© distribuido pela Licen√ßa P√∫blica Geral GNU.
+ *  Este arquivo È distribuido pela LicenÁa P˙blica Geral GNU.
  *  Veja o arquivo Licenca.txt distribuido com este software.
  *
- *  ESTE SOFTWARE N√ÉO OFERECE NENHUMA GARANTIA
+ *  ESTE SOFTWARE N√O OFERECE NENHUMA GARANTIA
  *
  */
 
@@ -55,7 +55,7 @@ POINT      keyvalue[9]  = {{0,255},{127,255},{255,255},
                            {0,127},{127,127},{255,127},
                            {0,0  },{127,0  },{255,0  }};
 
-// Vari√°veis:
+// Vari·veis:
 BOOL  joybutton[3]   = {0,0,0};
 int   joyshrx        = 8;
 int   joyshry        = 8;
@@ -149,11 +149,11 @@ BOOL JoySetEmulationType (HWND window, DWORD newtype)
 		if (joyGetDevCaps(JOYSTICKID1,&caps,sizeof(JOYCAPS)) != JOYERR_NOERROR)
 		{
 			MessageBox(window,
-					TEXT("O emulador n√£o conseguiu ler o joystick do seu computador.\n")
+					TEXT("O emulador n„o conseguiu ler o joystick do seu computador.\n")
 					TEXT("Se o joystick estiver configurado corretamente,\n")
-					TEXT("verifique se o cabo do joystick est√° encaixado corretamente\n")
-					TEXT("e verifique se o driver do joystick est√° instalado."),
-					TEXT("Configura√ß√£o"),
+					TEXT("verifique se o cabo do joystick est· encaixado corretamente\n")
+					TEXT("e verifique se o driver do joystick est· instalado."),
+					TEXT("ConfiguraÁ„o"),
 					MB_ICONEXCLAMATION | MB_SETFOREGROUND);
 			return 0;
 		}
@@ -161,12 +161,12 @@ BOOL JoySetEmulationType (HWND window, DWORD newtype)
 	else if ((joyinfo[newtype].device == DEVICE_MOUSE) &&
 			(joyinfo[joytype].device != DEVICE_MOUSE))
 		MessageBox(window,
-				TEXT("Para come√ßar a emular o joystick com seu mouse, clique ")
-				TEXT("na tela emulada com o bot√£o esquerdo. Durante a emula√ß√£o ")
-				TEXT("o mouse n√£o poder√° ser usado para outros fins, para voltar ")
-				TEXT("a us√°-lo, clique com o bot√£o esquerdo enquanto voc√™ segura ")
+				TEXT("Para comeÁar a emular o joystick com seu mouse, clique ")
+				TEXT("na tela emulada com o bot„o esquerdo. Durante a emulaÁ„o ")
+				TEXT("o mouse n„o poder· ser usado para outros fins, para voltar ")
+				TEXT("a us·-lo, clique com o bot„o esquerdo enquanto vocÍ segura ")
 				TEXT("a tecla CTRL."),
-				TEXT("Configura√ß√£o"),
+				TEXT("ConfiguraÁ„o"),
 				MB_ICONINFORMATION | MB_SETFOREGROUND);
 	joytype = newtype;
 	JoyInitialize();
