@@ -1,0 +1,13 @@
+Mudanças na versão 0.2
+
+ - Corrigido o carregamento das configurações da expansão
+ - Reimplementado a emulação do teclado. A emulação está 99.9% fiel ao teclado original.
+ - Adicionado recurso de colagem de texto da área de transferência via SHIFT+INSERT, com opção de acelerar a emulação ao colar.
+ - Corrigido ciclos das instruções branch.
+ - Adicionado exibição dos ciclos cumulativos no depurador, com novo comando 'cc' para zerá-lo.
+ - Adicionado mais símbolos da RAM e ROM para o depurador.
+ - Adicionado recurso para extrair programa BASIC da memória para a área de transferência
+
+Mudanças na versão 0.1
+
+ - Primeira Versão
