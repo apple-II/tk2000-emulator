@@ -1,0 +1,7 @@
+Lista de Tarefas:
+
+ - Tirar opcodes da versão 65C02
+ - Consertar mistura de cores
+ - Implementar TK2000 de 128KB
+ - Adicionar escolha de volume do som
+ - Adicionar Drag and Drop de imagens de disco e de tapes.
