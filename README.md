@@ -1,5 +1,4 @@
 # tk2000-emulator
-TK2000 Emulator
 
   TK2000 - Emulador do computador TK2000
   ------------------------------------------
